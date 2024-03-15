@@ -1,0 +1,123 @@
+/* ซ่อน pop-up โดยเริ่มต้น */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* สีพื้นหลังทึบ */
+    z-index: 9999;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.popup-content img {
+    width: 20px; /* ปรับขนาดของรูปไอคอน */
+    height: 20px;
+    cursor: pointer; /* เปลี่ยนรูปลูกศรเป็นตัวชี้ */
+    position: absolute;
+    top: 10px; /* ตำแหน่งด้านบน */
+    right: 10px; /* ตำแหน่งด้านขวา */
+}
+
+/* แสดง pop-up เมื่อถูกคลิก และปรับขนาดฟอร์ม */
+.popup-container.active {
+    display: block;
+}
+
+@font-face {
+    font-family: 'ChulabhornLikitText';
+    src: url('fonts/ChulabhornLikitText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'ChulabhornLikitText';
+}
+
+
+.button-submit {
+    justify-content: center;
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 15px;
+    background-color: #ffe838;
+    border: 3px solid #fff28d; 
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 10px; 
+    margin-left: 40px;
+}
+
+#text-show{    
+    text-align: center;
+    padding-top: 15px;
+    /* margin-top: auto; */
+}
+/*อย่าลืมเปลี่ยนชื่อclass*/
+
+.text-box{
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 0;
+    border: 1px solid gray;
+}
+
+p{
+    font-family: 'ChulabhornLikitText';
+    font-size: 12px;
+    margin: 0px;
+    /* padding-bottom: 10px; */
+}
+
+a{
+    color: #f7dd18;
+}
+
+input.duplicate-username {
+    border: 2px solid rgba(178, 34, 34); ; /* สีเส้นขอบสำหรับกรอบแสดงสำหรับชื่อผู้ใช้ที่ซ้ำ */
+    background-color: #FFCCCC; /* สีพื้นหลังของกล่องรับอินพุตเมื่อมีชื่อผู้ใช้ซ้ำ */
+}
+
+#username-error{
+    font-family: 'ChulabhornLikitText';
+    font-size: 12px;
+    padding-top: 2px;
+    color: red;
+} 
+
+input.password-mismatch {
+    border: 2px solid red; /* สีเส้นขอบสำหรับกรอบที่รหัสผ่านไม่ตรงกัน */
+    background-color: #FFCCCC; /* สีพื้นหลังของกล่องรับอินพุตเมื่อรหัสผ่านไม่ตรงกัน */
+}
+
+form {
+    margin-top: 20px;
+    margin-left: 220px;
+}
+
+select {
+    font-size: 12px;
+    width: 130px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
